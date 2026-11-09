@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html lang='id' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gdata/b' xmlns:data='http://www.google.com/2005/gdata/data' xmlns:expr='http://www.google.com/2005/gdata/expr'>
+<head>
+    <meta charset='UTF-8'/>
+    <meta content='width=device-width, initial-scale=1.0' name='viewport'/>
+    <title><data:blog.pageTitle/></title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap' rel='stylesheet'/>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel='stylesheet'/>
+    
+    <b:skin><![CDATA[
+        :root {
+            --primary-color: #d32f2f;
+            --primary-dark: #b71c1c;
+            --text-dark: #222222;
+            --text-gray: #666666;
+            --bg-light: #f9f9f9;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* --- TOP BAR --- */
+        .top-bar {
+            background: #111111;
+            color: #fff;
+            font-size: 12px;
+            padding: 6px 0;
+        }
+
+        .top-bar-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-icons a {
+            color: #fff;
+            margin-left: 12px;
+            transition: color 0.2s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-header {
+            padding: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 22px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #111;
+        }
+
+        .search-box {
+            display: flex;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            padding: 8px 12px;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            width: 250px;
+        }
+
+        .search-box button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0 15px;
+            cursor: pointer;
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: var(--primary-color);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            position: relative;
+            flex-wrap: wrap;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links li a {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: white;
+            padding: 10px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: background 0.2s;
+        }
+
+        .nav-links li a:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #ffffff;
+            color: var(--text-dark);
+            min-width: 180px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-radius: 0 0 4px 4px;
+            list-style: none;
+            display: none;
+            z-index: 1100;
+        }
+
+        .dropdown-menu.show {
+            display: block;
+        }
+
+        .dropdown-menu li a {
+            color: var(--text-dark);
+            padding: 10px 15px;
+            font-weight: 500;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dropdown-menu li a:hover {
+            background: var(--bg-light);
+            color: var(--primary-color);
+        }
+
+        .sidebar-close {
+            display: none;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            z-index: 1500;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* --- MAIN LAYOUT --- */
+        .main-container {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr;
+            gap: 30px;
+            margin: 30px auto;
+        }
+
+        .category-tag {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 3px;
+            margin: 12px 0 8px 0;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+            margin: 30px 0 20px 0;
+            text-transform: uppercase;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111111;
+            color: #fff;
+            padding: 40px 0 20px 0;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+            font-size: 13px;
+            color: #777;
+        }
+
+        @media (max-width: 900px) {
+            .menu-toggle { display: block; }
+            .main-container { grid-template-columns: 1fr; }
+            .nav-links {
+                position: fixed;
+                top: 0;
+                left: -280px;
+                width: 280px;
+                height: 100vh;
+                background: #1a1a1a;
+                flex-direction: column;
+                padding-top: 60px;
+                transition: left 0.3s ease-in-out;
+                z-index: 2000;
+                overflow-y: auto;
+            }
+            .nav-links.active { left: 0; }
+            .nav-links li a { padding: 15px 20px; border-bottom: 1px solid #333; }
+            .sidebar-close {
+                display: block !important;
+                position: absolute;
+                top: 15px;
+                right: 20px;
+                font-size: 20px;
+                color: #fff;
+                background: none;
+                border: none;
+                cursor: pointer;
+            }
+            .dropdown-menu {
+                position: static;
+                box-shadow: none;
+                background: #252525;
+            }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    ]]></b:skin>
+</head>
+
+<body>
+    <div class='overlay' id='overlay'/>
+
+    <!-- Top Bar -->
+    <div class='top-bar'>
+        <div class='container top-bar-flex'>
+            <div>Portal Berita Nasional &amp; Riset AI Geturnet</div>
+            <div class='social-icons'>
+                <a href='#'><i class='fab fa-facebook-f'/></a>
+                <a href='#'><i class='fab fa-twitter'/></a>
+                <a href='#'><i class='fab fa-instagram'/></a>
+                <a href='#'><i class='fab fa-youtube'/></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header>
+        <div class='container main-header'>
+            <div class='header-left'>
+                <button class='menu-toggle' id='menuToggle'><i class='fas fa-bars'/></button>
+                <a class='logo' href='/'>GETUR<span>NET</span></a>
+            </div>
+            <div class='search-box'>
+                <form action='/search' method='GET'>
+                    <input name='q' placeholder='Cari berita...' type='text'/>
+                    <button type='submit'><i class='fas fa-search'/></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Navigation Menu -->
+        <nav>
+            <div class='container nav-container'>
+                <ul class='nav-links' id='navLinks'>
+                    <button class='sidebar-close' id='sidebarClose'><i class='fas fa-times'/></button>
+                    
+                    <li><a href='/search/label/Terkini'>Terkini</a></li>
+                    <li><a href='/search/label/Terpopuler'>Terpopuler</a></li>
+                    <li><a href='/search/label/Bisnis'>Bisnis</a></li>
+                    <li><a href='/search/label/Green'>Green</a></li>
+                    <li><a href='/search/label/Tech'>Tech</a></li>
+                    <li><a href='/search/label/Bola'>Bola</a></li>
+                    <li><a href='/search/label/Sport'>Sport</a></li>
+                    <li><a href='/search/label/Lifestyle'>Lifestyle</a></li>
+                    <li><a href='/search/label/Entertainment'>Entertainment</a></li>
+                    <li><a href='/search/label/Otomotif'>Otomotif</a></li>
+                    <li><a href='/search/label/Tekno'>Tekno</a></li>
+                    <li><a href='/search/label/Health'>Health</a></li>
+                    <li><a href='/search/label/Foto'>Foto</a></li>
+                    <li><a href='/search/label/Video'>Video</a></li>
+                    <li><a href='/search/label/Opini'>Opini</a></li>
+
+                    <!-- Dropdown Regional -->
+                    <li class='dropdown-container'>
+                        <a class='dropdown-toggle' href='#'>Regional <i class='fas fa-chevron-down' style='font-size: 10px;'/></a>
+                        <ul class='dropdown-menu'>
+                            <li><a href='/search/label/Jakarta'>Jakarta</a></li>
+                            <li><a href='/search/label/Jabar'>Jabar</a></li>
+                            <li><a href='/search/label/Jatim'>Jatim</a></li>
+                            <li><a href='/search/label/Jateng'>Jateng</a></li>
+                            <li><a href='/search/label/Sumut'>Sumut</a></li>
+                            <li><a href='/search/label/Banten'>Banten</a></li>
+                            <li><a href='/search/label/Sulsel'>Sulsel</a></li>
+                            <li><a href='/search/label/Bali'>Bali</a></li>
+                            <li><a href='/search/label/Sumsel'>Sumsel</a></li>
+                            <li><a href='/search/label/Jogja'>Jogja</a></li>
+                            <li><a href='/search/label/Riau'>Riau</a></li>
+                            <li><a href='/search/label/Lampung'>Lampung</a></li>
+                            <li><a href='/search/label/Kaltim'>Kaltim</a></li>
+                            <li><a href='/search/label/Kalbar'>Kalbar</a></li>
+                            <li><a href='/search/label/Sumbar'>Sumbar</a></li>
+                            <li><a href='/search/label/Bogor'>Bogor</a></li>
+                            <li><a href='/search/label/Bekasi'>Bekasi</a></li>
+                            <li><a href='/search/label/Malang'>Malang</a></li>
+                            <li><a href='/search/label/Surakarta'>Surakarta</a></li>
+                            <li><a href='/search/label/Batam'>Batam</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Dropdown Riset & Layanan -->
+                    <li class='dropdown-container'>
+                        <a class='dropdown-toggle' href='#'>Riset &amp; AI <i class='fas fa-chevron-down' style='font-size: 10px;'/></a>
+                        <ul class='dropdown-menu'>
+                            <li><a href='#'>Data Riset &amp; Pengembangan AI</a></li>
+                            <li><a href='#'>Media Monitoring</a></li>
+                            <li><a href='#'>Generative Engine Optimization</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content Layout Blogger -->
+    <div class='container main-container'>
+        <main>
+            <b:section id='main-content' class='main-content' showaddelement='yes'>
+                <b:widget id='Blog1' locked='false' title='Posting Blog' type='Blog' visible='true'>
+                    <b:includable id='main'>
+                        <div class='blog-posts'>
+                            <b:loop values='data:posts' var='post'>
+                                <div class='headline-main' style='margin-bottom: 30px;'>
+                                    <b:if cond='data:post.featuredImage'>
+                                        <img expr:src='data:post.featuredImage' expr:alt='data:post.title' style='width:100%; height:350px; object-fit:cover; border-radius:6px;'/>
+                                    </b:if>
+                                    <h1 style='margin-top:15px;'><a expr:href='data:post.url'><data:post.title/></a></h1>
+                                    <div class='meta-info'><i class='far fa-clock'/> <data:post.date/></div>
+                                    <p><data:post.snippet/></p>
+                                </div>
+                            </b:loop>
+                        </div>
+                    </b:includable>
+                </b:widget>
+            </b:section>
+        </main>
+
+        <!-- Sidebar Widget -->
+        <aside>
+            <div class='sidebar-box' style='background:var(--bg-light); border:1px solid var(--border-color); padding:20px; border-radius:6px;'>
+                <div class='section-title' style='margin-top:0;'>Terpopuler</div>
+                <b:section id='sidebar-section' class='sidebar-section' showaddelement='yes'>
+                    <b:widget id='PopularPosts1' locked='false' title='Entri Populer' type='PopularPosts' visible='true'/>
+                </b:section>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class='container footer-grid'>
+            <div class='footer-col'>
+                <h3 class='logo' style='color:#fff;'>GETUR<span>NET</span></h3>
+                <p style='font-size:13px; color:#aaa; margin-top:10px;'>Portal berita nasional, riset AI, regional, dan teknologi terdepan.</p>
+            </div>
+            <div class='footer-col'>
+                <h3>Redaksi &amp; Legalitas</h3>
+                <ul>
+                    <li><a href='#'>Redaksi</a></li>
+                    <li><a href='#'>Kontak</a></li>
+                    <li><a href='#'>Tentang Kami</a></li>
+                    <li><a href='#'>Karir</a></li>
+                    <li><a href='#'>Pedoman Media Siber</a></li>
+                    <li><a href='#'>Kebijakan Privasi</a></li>
+                </ul>
+            </div>
+            <div class='footer-col'>
+                <h3>Lainnya</h3>
+                <ul>
+                    <li><a href='#'>Saran dan Kritik</a></li>
+                    <li><a href='#'>Site Map</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class='copyright'>
+            &amp;copy; 2026 Geturnet Ltd. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript Mobile Navigation & Dropdown -->
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebarClose = document.getElementById('sidebarClose');
+        const navLinks = document.getElementById('navLinks');
+        const overlay = document.getElementById('overlay');
+
+        if(menuToggle) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.add('active');
+                overlay.classList.add('active');
+            });
+        }
+
+        function closeMenu() {
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+        }
+
+        if(sidebarClose) sidebarClose.addEventListener('click', closeMenu);
+        if(overlay) overlay.addEventListener('click', closeMenu);
+
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const dropdownMenu = this.nextElementSibling;
+                if(dropdownMenu) dropdownMenu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

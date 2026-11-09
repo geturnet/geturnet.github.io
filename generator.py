@@ -11,6 +11,18 @@ SITE_NAME = "Geturnet Ltd"
 LABELS = [
     "Investasi", "Pemrograman", "PHP", "SEO", "Bisnis", 
     "Cloud", "FinTech", "Audit Gratis", "Teknologi", "WebDev"
+    "market", "finance", "macro", "micro", "economy", "explainers", "manufacturing", 
+    "property", "health", "education", "lifestyle", "hospitality", "tech", "media", 
+    "smes", "luxury", "whoswho", "international", "localresources", "politics", 
+    "culture", "science", "publicpolicy", "business", "news", "sports", "arts", 
+    "celebrities", "automotive", "commentary", "interview", "money", "perbankan", 
+    "belanja", "sharia", "football", "opinion", "video", "kisah", "index", 
+    "sejarah", "entrepreneur", "research", "photo", "olahraga", "selebritis", 
+    "country", "dki", "diy", "jabar", "jatim", "jateng", "aceh", "papua", 
+    "kalimantan", "sumatra", "sulawesi", "bali", "asia", "afrika", "australia", 
+    "rusia", "eropa", "amerika", "ai", "teknologi", "astronomi", "zodiak", "maps"
+
+
 ]
 
 # Template HTML Master dengan AdSense dan Komponen Lengkap

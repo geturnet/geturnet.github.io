@@ -67,3 +67,19 @@ geturnet.github.io/
 ├── audit-gratis/               # Folder Kategori Audit Gratis (30 Artikel)
 ├── teknologi/                  # Folder Kategori Teknologi (30 Artikel)
 └── webdev/                     # Folder Kategori WebDev (30 Artikel)
+
+```
+---
+
+
+## 🏢 Kepemilikan & Jaringan Media
+
+Situs dan teknologi automasi ini dikembangkan dan dikelola secara penuh oleh **Admin Devshel** di bawah naungan **Geturnet Ltd Group** serta didukung oleh infrastruktur distribusi **Nabi Group Network**. Konten download penunjang serta media partner yang tersemat merupakan produk resmi yang terdaftar secara legal.
+
+---
+
+## 📄 Lisensi
+
+Hak Cipta Dilindungi © 2026 **Geturnet Ltd Group & Nabi Group Network**. Penggunaan komersial atau penggandaan massal terhadap konten artikel tanpa izin tertulis dari pihak manajemen dilarang keras sesuai dengan ketentuan yang tertera pada dokumen *License Agreement*.
+Gunakan kode dengan hati-hati.
+

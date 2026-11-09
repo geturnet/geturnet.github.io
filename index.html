@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="id" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geturnet Ltd - Solusi Investasi, Bisnis, Pemrograman & Audit SEO Gratis</title>
+    <meta name="description" content="Dapatkan panduan investasi menguntungkan, tutorial pemrograman PHP, jaringan, cloud, wawasan bisnis online commerce, serta layanan Audit SEO gratis selama 14 hari dari Geturnet Ltd.">
+    <meta name="keywords" content="Geturnet, Investasi, Bisnis, PHP, SEO, Audit SEO Gratis, Pemrograman, Teknologi, FinTech, WebDev">
+    <meta name="author" content="Admin Geturnet Ltd">
+    <link rel="canonical" href="https://geturnet.github.io/">
+
+    <!-- Google AdSense Account Verification -->
+    <meta name="google-adsense-account" content="ca-pub-4549220738609468">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://geturnet.github.io/">
+    <meta property="og:title" content="Geturnet Ltd - Solusi Investasi, Bisnis, Pemrograman & Audit SEO Gratis">
+    <meta property="og:description" content="Platform edukasi bisnis, teknologi, pemrograman, dan optimasi SEO terpercaya bersama Geturnet Ltd.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80">
+    <meta property="og:site_name" content="Geturnet Ltd">
+    <meta property="og:locale" content="id_ID">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://geturnet.github.io/">
+    <meta name="twitter:title" content="Geturnet Ltd - Solusi Investasi, Bisnis, Pemrograman & Audit SEO Gratis">
+    <meta name="twitter:description" content="Platform edukasi bisnis, teknologi, pemrograman, dan optimasi SEO terpercaya bersama Geturnet Ltd.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=80">
+
+    <!-- JSON-LD Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://geturnet.github.io/#organization",
+          "name": "Geturnet Ltd.",
+          "url": "https://geturnet.github.io/",
+          "logo": "https://geturnet.github.io/favicon.ico",
+          "sameAs": [
+            "https://facebook.com/geturnet",
+            "https://instagram.com/geturnet"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://geturnet.github.io/#website",
+          "url": "https://geturnet.github.io/",
+          "name": "Geturnet Ltd",
+          "description": "Solusi Investasi, Bisnis, Pemrograman & Audit SEO Gratis",
+          "publisher": {
+            "@id": "https://geturnet.github.io/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- Google AdSense JavaScript Tag -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4549220738609468" crossorigin="anonymous"></script>
+
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --primary-hover: #0056b3;
+            --dark-color: #222;
+            --light-bg: #f4f7f6;
+            --text-muted: #666;
+            --border-color: #e5e5e5;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; background-color: var(--light-bg); color: #333; }
+        a { color: var(--primary-color); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        
+        /* Layout */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        header { background: #fff; border-bottom: 1px solid var(--border-color); padding: 15px 0; position: sticky; top: 0; z-index: 1000; }
+        .header-wrap { display: flex; justify-content: space-between; align-items: center; }
+        .logo a { font-size: 24px; font-weight: bold; color: var(--dark-color); }
+        nav ul { display: flex; gap: 20px; }
+        nav a { color: #555; font-weight: 500; font-size: 14px; }
+        nav a:hover { color: var(--primary-color); }
+
+        .main-layout { display: grid; grid-template-columns: 1fr; gap: 30px; margin: 30px 0; }
+        @media (min-width: 768px) {
+            .main-layout { grid-template-columns: 2fr 1fr; }
+        }
+
+        /* Card & Utility */
+        .card { background: #fff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 25px; }
+        .card-title { font-size: 18px; margin-bottom: 15px; font-weight: bold; border-left: 4px solid var(--primary-color); padding-left: 10px; color: var(--dark-color); }
+
+        /* Image Slide Component */
+        .slider-container { position: relative; width: 100%; height: 350px; overflow: hidden; border-radius: 8px; margin-bottom: 25px; background: #000; }
+        .slide { position: absolute; width: 100%; height: 100%; opacity: 0; transition: opacity 0.8s ease-in-out; display: flex; align-items: flex-end; }
+        .slide.active { opacity: 1; }
+        .slide img { width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0; z-index: 1; }
+        .slide-caption { position: relative; z-index: 2; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); color: #fff; padding: 20px; width: 100%; }
+        .slide-caption h2 { font-size: 20px; margin-top: 5px; }
+
+        /* Post Grid Items */
+        .post-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 600px) { .post-grid { grid-template-columns: 1fr 1fr; } }
+        .post-item { background: #fff; border: 1px solid var(--border-color); border-radius: 6px; overflow: hidden; display: flex; flex-direction: column; }
+        .post-item img { height: 160px; object-fit: cover; }
+        .post-content { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .post-item h3 { font-size: 16px; margin: 8px 0; color: var(--dark-color); }
+        .meta-text { font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
+        .badge { background: #e1f0ff; color: var(--primary-color); padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; display: inline-block; }
+
+        /* Sidebar Widgets Elements */
+        .trend-list li, .popular-list li, .archive-list li { padding: 10px 0; border-bottom: 1px dashed var(--border-color); font-size: 14px; }
+        .trend-list li:last-child, .popular-list li:last-child, .archive-list li:last-child { border: none; }
+        
+        .labels-flex { display: flex; flex-wrap: wrap; gap: 8px; }
+        .label-tag { background: #f0f2f5; color: #444; padding: 5px 12px; border-radius: 20px; font-size: 12px; display: inline-block; }
+        .label-tag:hover { background: var(--primary-color); color: #fff; text-decoration: none; }
+
+        /* Contact Form Fields */
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; font-size: 13px; margin-bottom: 5px; font-weight: 500; }
+        .form-control { width: 100%; padding: 10px; border: 1px solid var(--border-color); border-radius: 4px; font-size: 14px; }
+        .btn-submit { background: var(--primary-color); color: #fff; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold; width: 100%; }
+        .btn-submit:hover { background: var(--primary-hover); }
+
+        /* Ads Wrapper */
+        .ads-placeholder { text-align: center; background: #e9ecef; padding: 10px; color: #6c757d; font-size: 12px; border-radius: 4px; margin: 20px 0; }
+
+        /* Essential Mandatory Pages Tab Section */
+        .tab-nav { display: flex; border-bottom: 1px solid var(--border-color); margin-bottom: 15px; flex-wrap: wrap; gap: 5px; }
+        .tab-btn { padding: 8px 12px; border: none; background: none; cursor: pointer; font-size: 13px; font-weight: 500; color: #555; border-radius: 4px 4px 0 0; }
+        .tab-btn.active { background: #fff; border: 1px solid var(--border-color); border-bottom: 2px solid var(--primary-color); color: var(--primary-color); font-weight: bold; }
+        .tab-content { display: none; font-size: 14px; color: #444; line-height: 1.7; }
+        .tab-content.active { display: block; }
+        .tab-content h3 { margin-bottom: 10px; color: var(--dark-color); }
+        .tab-content p { margin-bottom: 10px; }
+
+        /* Footer Segment */
+        footer { background: #fff; border-top: 1px solid var(--border-color); padding: 40px 0 20px; margin-top: 50px; font-size: 14px; }
+        .footer-grid { display: grid; grid-template-columns: 1fr; gap: 30px; margin-bottom: 30px; }
+        @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
+        .footer-bottom { text-align: center; border-top: 1px solid var(--border-color); padding-top: 20px; color: var(--text-muted); font-size: 12px; }
+    </style>
+</head>
+<body>
+
+    <!-- Header & Navigation Bar Area -->
+    <header>
+        <div class="container header-wrap">
+            <div class="logo">
+                <a href="https://geturnet.github.io/">Geturnet Ltd</a>
+            </div>
+            <nav aria-label="Main Navigation">
+                <ul>
+                    <li><a href="https://geturnet.github.io/">Home</a></li>
+                    <li><a href="#blog-posts">Artikel</a></li>
+                    <li><a href="#tools">Tools</a></li>
+                    <li><a href="#sitemap">Sitemap</a></li>
+                    <li><a href="#legal-docs">Halaman</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Layout Section -->
+    <div class="container main-layout">
+        
+        <!-- Left Container: Articles, Slides, and Content Area -->
+        <main>
+            <!-- Google AdSense - Top Responsive Slot -->
+            <div class="ads-placeholder">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4549220738609468"
+                     data-ad-slot="1234567890"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <!-- Image Slide Component (Trending Slider) -->
+            <section class="slider-container" aria-label="Featured Posts Slider">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=800&auto=format&fit=crop&q=80" alt="Strategi Investasi Jangka Panjang">
+                    <div class="slide-caption">
+                        <span class="badge">INVESTASI</span>
+                        <h2>5 Strategi Portofolio Investasi Cerdas di Era Digital Modern</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80" alt="Tutorial PHP & Pemrograman">
+                    <div class="slide-caption">
+                        <span class="badge">PEMROGRAMAN</span>
+                        <h2>Optimasi Performa Website PHP Skala Besar dengan Clean Architecture</h2>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=800&auto=format&fit=crop&q=80" alt="Audit SEO Gratis">
+                    <div class="slide-caption">
+                        <span class="badge">SEO & MARKETING</span>
+                        <h2>Klaim Layanan Audit SEO Gratis 14 Hari untuk Tingkatkan Traffic Bisnis Anda</h2>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Blog Post Grid Section -->
+            <section id="blog-posts" class="card">
+                <h2 class="card-title">Artikel & Tutorial Terbaru</h2>
+                <div class="post-grid">
+                    
+                    <article class="post-item">
+                        <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=600&auto=format&fit=crop&q=80" alt="Investasi FinTech">
+                        <div class="post-content">
+                            <div>
+                                <span class="badge">Investasi</span>
+                                <div class="meta-text">10 Nov 2026 • Oleh Admin Ltd</div>
+                                <h3><a href="#">Mengenal Risiko dan Keuntungan Investasi Reksa Dana Saham</a></h3>
+                            </div>
+                            <a href="#" style="font-size: 13px; font-weight: 600; margin-top: 10px;">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="post-item">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=80" alt="Coding PHP">
+                        <div class="post-content">
+                            <div>
+                                <span class="badge">Pemrograman</span>
+                                <div class="meta-text">09 Nov 2026 • Oleh Dev Team</div>
+                                <h3><a href="#">Cara Membuat RESTful API Handal Menggunakan Native PHP Modern</a></h3>
+                            </div>
+                            <a href="#" style="font-size: 13px; font-weight: 600; margin-top: 10px;">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="post-item">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=80" alt="Audit SEO">
+                        <div class="post-content">
+                            <div>
+                                <span class="badge">SEO</span>
+                                <div class="meta-text">08 Nov 2026 • Oleh SEO Expert</div>
+                                <h3><a href="#">Panduan Lengkap Core Web Vitals untuk PageSpeed 99+</a></h3>
+                            </div>
+                            <a href="#" style="font-size: 13px; font-weight: 600; margin-top: 10px;">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="post-item">
+                        <img src="https://images.unsplash.com/photo-1556742049-0a67d55362a9?w=600&auto=format&fit=crop&q=80" alt="Bisnis Online">
+                        <div class="post-content">
+                            <div>
+                                <span class="badge">Bisnis</span>
+                                <div class="meta-text">07 Nov 2026 • Oleh Business Unit</div>
+                                <h3><a href="#">Strategi Efektif Scale-Up Toko Online Commerce di Tahun 2026</a></h3>
+                            </div>
+                            <a href="#" style="font-size: 13px; font-weight: 600; margin-top: 10px;">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- Google AdSense - Middle Content Slot -->
+            <div class="ads-placeholder">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-4549220738609468"
+                     data-ad-slot="0987654321"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <!-- Mandatory Legal & Interactive Pages Tabs Container -->
+            <section id="legal-docs" class="card">
+                <h2 class="card-title">Informasi & Halaman Wajib</h2>
+                <div class="tab-nav">
+                    <button class="tab-btn active" onclick="openTab(event, 'tab-privacy')">Privacy Policy</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-license')">License / Terms</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-disclaimer')">Disclaimer</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-sitemap')">Sitemap XML</button>
+                </div>
+
+                <div id="tab-privacy" class="tab-content active">
+                    <h3>Kebijakan Privasi (Privacy Policy)</h3>
+                    <p>Geturnet Ltd sangat menghargai privasi Anda. Halaman Kebijakan Privasi ini menguraikan jenis informasi pribadi apa saja yang dikumpulkan dan diterima oleh situs <strong>https://geturnet.github.io/</strong> serta bagaimana kami menggunakannya.</p>
+                    <p>Kami menggunakan layanan pihak ketiga seperti Google AdSense untuk menayangkan iklan saat Anda mengunjungi situs kami. Google dapat menggunakan informasi (tidak termasuk nama, alamat, alamat email, atau nomor telepon Anda) tentang kunjungan Anda ke situs ini dan situs web lain untuk menyediakan iklan tentang barang dan jasa yang menarik bagi Anda.</p>
+                </div>
+
+                <div id="tab-license" class="tab-content">
+                    <h3>Lisensi & Ketentuan Layanan (License & Terms)</h3>
+                    <p>Seluruh materi, artikel, kode pemrograman, dan logo pada platform Geturnet Ltd dilindungi oleh hak cipta. Anda diperbolehkan membagikan ulang tautan artikel dengan menyertakan sumber asli, namun dilarang keras menyalin atau mengkomersialkan konten tanpa izin tertulis dari manajemen Geturnet.</p>
+                    <p>Layanan Audit SEO Gratis 14 Hari tunduk pada syarat dan ketentuan kuota antrean yang berlaku di perusahaan kami.</p>
+                </div>
+
+                <div id="tab-disclaimer" class="tab-content">
+                    <h3>Pernyataan Penyangkalan (Disclaimer)</h3>
+                    <p>Semua informasi yang dibagikan di situs web Geturnet Ltd ditulis denganikat itikad baik dan untuk tujuan informasi umum semata. Segala tindakan yang Anda ambil atas informasi yang ditemukan di situs web ini murni merupakan risiko Anda sendiri.</p>
+                    <p>Konten investasi dan finansial di sini bukanlah nasihat keuangan profesional (financial advisor). Lakukan riset mandiri atau konsultasikan dengan ahli keuangan sebelum mengambil keputusan investasi.</p>
+                </div>
+
+                <div id="tab-sitemap" class="tab-content">
+                    <h3>Sitemap & Peta Situs</h3>
+                    <p>Berikut adalah tautan navigasi struktur halaman utama yang terindeks di Geturnet Ltd:</p>
+                    <ul style="list-style: disc; padding-left: 20px; margin-top: 10px;">
+                        <li><a href="https://geturnet.github.io/">Halaman Utama (Home)</a></li>
+                        <li><a href="#blog-posts">Arsip Artikel Terbaru</a></li>
+                        <li><a href="#tools">Layanan Audit SEO & Tools</a></li>
+                        <li><a href="#contact">Formulir Kontak Resmi</a></li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Right Container: Sidebar (Popular Posts, Trend, Labels, Archive, Contact Form) -->
+        <aside>
+            
+            <!-- Tren / Hot Topics Widget -->
+            <div class="card">
+                <h2 class="card-title">🔥 Tren Terkini</h2>
+                <ul class="trend-list">
+                    <li><a href="#">1. Tren Pasar Saham & Kripto Q4 2026</a></li>
+                    <li><a href="#">2. Migrasi Web ke PHP 8.4 Server Performance</a></li>
+                    <li><a href="#">3. Algoritma Google Update Terbaru & Dampaknya</a></li>
+                    <li><a href="#">4. Strategi Cloud Hosting Skala Enterprise</a></li>
+                </ul>
+            </div>
+
+            <!-- Popular Posts Widget -->
+            <div class="card">
+                <h2 class="card-title">⭐ Postingan Populer</h2>
+                <ul class="popular-list">
+                    <li><a href="#">Panduan Memulai Investasi Saham Bagi Pemula Modal Kecil</a></li>
+                    <li><a href="#">10 Framework PHP Terbaik untuk Developer Backend Profesional</a></li>
+                    <li><a href="#">Cara Meningkatkan Domain Authority (DA) dengan Backlink Berkualitas</a></li>
+                </ul>
+            </div>
+
+            <!-- Labels / Tags Widget -->
+            <div class="card">
+                <h2 class="card-title">🏷️ Label / Kategori</h2>
+                <div class="labels-flex">
+                    <a href="#" class="label-tag">Investasi</a>
+                    <a href="#" class="label-tag">Pemrograman</a>
+                    <a href="#" class="label-tag">PHP</a>
+                    <a href="#" class="label-tag">SEO</a>
+                    <a href="#" class="label-tag">Bisnis</a>
+                    <a href="#" class="label-tag">Cloud</a>
+                    <a href="#" class="label-tag">FinTech</a>
+                    <a href="#" class="label-tag">Audit Gratis</a>
+                </div>
+            </div>
+
+            <!-- Archive Widget -->
+            <div class="card">
+                <h2 class="card-title">📅 Arsip Artikel</h2>
+                <ul class="archive-list">
+                    <li><a href="#">November 2026 (12 Artikel)</a></li>
+                    <li><a href="#">Oktober 2026 (24 Artikel)</a></li>
+                    <li><a href="#">September 2026 (18 Artikel)</a></li>
+                    <li><a href="#">Agustus 2026 (20 Artikel)</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Form Widget -->
+            <div class="card" id="contact">
+                <h2 class="card-title">✉️ Hubungi Kami</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Nama Lengkap</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Alamat Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="email@domain.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan / Permintaan Audit SEO</label>
+                        <textarea id="message" name="message" rows="4" class="form-control" placeholder="Tuliskan pesan atau URL web untuk audit SEO gratis..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Kirim Pesan</button>
+                </form>
+            </div>
+
+        </aside>
+
+    </div>
+
+    <!-- Footer Area -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3 style="margin-bottom: 12px; color: var(--dark-color);">Tentang Geturnet Ltd</h3>
+                <p style="font-size: 13px; color: var(--text-muted);">Geturnet Ltd adalah entitas platform terpercaya yang menyajikan edukasi investasi finansial, tutorial pemrograman tingkat lanjut, bisnis digital, serta layanan optimasi SEO profesional.</p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 12px; color: var(--dark-color);">Tautan Cepat</h3>
+                <ul style="font-size: 13px; display: flex; flex-direction: column; gap: 6px;">
+                    <li><a href="https://geturnet.github.io/">Beranda Utama</a></li>
+                    <li><a href="#blog-posts">Daftar Artikel</a></li>
+                    <li><a href="#legal-docs">Kebijakan Privasi & Lisensi</a></li>
+                    <li><a href="#contact">Kontak Resmi</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 12px; color: var(--dark-color);">Layanan Kami</h3>
+                <ul style="font-size: 13px; display: flex; flex-direction: column; gap: 6px;">
+                    <li><a href="#contact">Audit SEO Gratis 14 Hari</a></li>
+                    <li><a href="#">Konsultasi Portofolio Investasi</a></li>
+                    <li><a href="#">Pengembangan Web & Backend PHP</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>Geturnet Ltd</strong>. All Rights Reserved. Hosted with GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Image Slider & Tabs Functionality -->
+    <script>
+        // Automatic Image Slider Script
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function nextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        if(slides.length > 0) {
+            setInterval(nextSlide, 4000); // Ganti slide setiap 4 detik
+        }
+
+        // Tab Navigation for Legal / Mandatory Pages Script
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            const tabButtons = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>

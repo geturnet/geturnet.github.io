@@ -1,3 +1,23 @@
+# Cache Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Folder lingkungan virtual (jika pakai)
+venv/
+.venv/
+env/
+
+# Berkas log sistem
+*.log
+npm-debug.log*
+
+# File sampah sistem operasi
+.DS_Store
+Thumbs.db
+
+
 ### AL ###
 #Template for AL projects for Dynamics 365 Business Central
 #launch.json folder

@@ -31,6 +31,7 @@ def update_website(new_title, category, summary, image_url):
     if news_grid:
         new_card_soup = BeautifulSoup(generate_article_html(new_title, category, summary, image_url), "html.parser")
         news_grid.insert(0, new_card_soup)
+news_grid = soup.find("div", class_="news-grid")
 
         # Simpan kembali file HTML
         with open(HTML_FILE, "w", encoding="utf-8") as file:
